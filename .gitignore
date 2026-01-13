@@ -1,0 +1,25 @@
+# Ignore thư mục VS Code settings
+.vscode/
+
+# Ignore node_modules (nếu sau này dùng npm / frontend build)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore OS / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ignore build / dist folders (nếu có build frontend)
+dist/
+build/
+
+# Ignore personal launch/debug configs
+.vscode/launch.json
+
+# Ignore npm lock files nếu bạn không muốn track
+package-lock.json
+yarn.lock
