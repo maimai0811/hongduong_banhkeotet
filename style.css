@@ -96,13 +96,7 @@ body {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #c81e1e;
-  color: white;
-}
+
 
 
 /* SLIDER */
@@ -139,3 +133,38 @@ footer {
 @media (max-width: 500px) {
   .slide { flex: 0 0 100%; } /* 1 ảnh */
 }
+
+
+footer {
+  background: #c81e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.footer-content a:hover {
+  color: #fcd34d;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+
