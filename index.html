@@ -35,7 +35,7 @@
     </section>
 
     <!-- SET QUÀ -->
-    <section id="setqua" class="section gift-section">
+    <!-- <section id="setqua" class="section gift-section">
         <h2>🎁 Set Quà Tết</h2>
 
         <div class="slider">
@@ -81,7 +81,23 @@
 
             <button class="nav next">❯</button>
         </div>
-    </section>
+    </section> -->
+
+<section id="setqua" class="section gift-section">
+  <h2>🎁 Set Quà Tết</h2>
+
+  <div class="gift-slider-wrapper">
+    <button class="gift-nav prev" onclick="slidePrev()">❮</button>
+
+    <div class="gift-slider">
+      <div class="gift-track" id="giftTrack"></div>
+    </div>
+
+    <button class="gift-nav next" onclick="slideNext()">❯</button>
+  </div>
+</section>
+
+
 
     <footer>
         <div class="footer-content">
@@ -115,9 +131,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" title="Lên đầu trang">
-        ⬆️
-    </button>
+    <button id="backToTop" title="Lên đầu trang"></button>
 
     <div id="cartButton">
         🛒
@@ -164,6 +178,7 @@
 
     <script src="script.js"></script>
     <script src="product.js"></script>
+    <script src="giftSet.js"></script>
     <script src="cart.js"></script>
     <script src="firewall.js"></script>
 </body>
