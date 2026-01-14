@@ -34,78 +34,31 @@
 
     </section>
 
-    <!-- SET QUÀ -->
-    <!-- <section id="setqua" class="section gift-section">
+
+
+    <section id="setqua" class="section gift-section">
         <h2>🎁 Set Quà Tết</h2>
 
-        <div class="slider">
-            <button class="nav prev">❮</button>
+        <div class="gift-slider-wrapper">
+            <button class="gift-nav prev" onclick="slidePrev()">❮</button>
 
-            <div class="slides">
-                <div class="slide">
-                    <img src="images/set/set_1.jpg" />
-                    <h3>Set Phú Quý</h3>
-                    <p>499.000đ</p>
-                </div>
-                <div class="slide">
-                    <img src="images/set/set_2.jpg" />
-                    <h3>Set An Khang</h3>
-                    <p>699.000đ</p>
-                </div>
-                <div class="slide">
-                    <img src="images/set/set_2.jpg" />
-                    <h3>Set Đại Cát</h3>
-                    <p>999.000đ</p>
-                </div>
-                <div class="slide">
-                    <img src="images/set/set_2.jpg" />
-                    <h3>Set Đại Cát</h3>
-                    <p>999.000đ</p>
-                </div>
-                <div class="slide">
-                    <img src="images/set/set_2.jpg" />
-                    <h3>Set Đại Cát</h3>
-                    <p>999.000đ</p>
-                </div>
-                <div class="slide">
-                    <img src="images/set/set_2.jpg" />
-                    <h3>Set Đại Cát</h3>
-                    <p>999.000đ</p>
-                </div>
-                <div class="slide">
-                    <img src="images/set/set_2.jpg" />
-                    <h3>Set Đại Cát</h3>
-                    <p>999.000đ</p>
-                </div>
+            <div class="gift-slider">
+                <div class="gift-track" id="giftTrack"></div>
             </div>
 
-            <button class="nav next">❯</button>
+            <button class="gift-nav next" onclick="slideNext()">❯</button>
         </div>
-    </section> -->
-
-<section id="setqua" class="section gift-section">
-  <h2>🎁 Set Quà Tết</h2>
-
-  <div class="gift-slider-wrapper">
-    <button class="gift-nav prev" onclick="slidePrev()">❮</button>
-
-    <div class="gift-slider">
-      <div class="gift-track" id="giftTrack"></div>
-    </div>
-
-    <button class="gift-nav next" onclick="slideNext()">❯</button>
-  </div>
-</section>
+    </section>
 
 
 
     <footer>
         <div class="footer-content">
             <div class="footer-item">
-                <strong>Hotline:</strong>
+                <strong>Hotline:</strong> <a href="tel:0364180897">0364 180 897</a>
             </div>
             <div class="footer-item">
-                <strong>Facebook:</strong>
+                <strong>Facebook:</strong> <a href="https://www.facebook.com/ngohong0110/posts/pfbid0Mf5XuAD9EbXoEeEM5PpQ2TJhSa33PUjQVLAerysF36Ki65cwaArtLeZpQHSLBx6vl" target="_blank">Ngô Hồng</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -114,7 +67,7 @@
     </footer>
 
 
-    <footer class="tet-footer">
+    <!-- <footer class="tet-footer">
         <div class="footer-container">
             <div class="footer-col contact-info">
                 <h3>THÔNG TIN LIÊN HỆ</h3>
@@ -129,7 +82,7 @@
                 <button onclick="changeWish()" class="btn-refresh">Nhận lời chúc mới</button>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <button id="backToTop" title="Lên đầu trang"></button>
 
@@ -163,18 +116,46 @@
             </div>
 
         </div>
-<div class="cart-footer">
-    <div class="cart-total">
-        <span>Tổng tiền:</span>
-        <strong id="cartTotal">0đ</strong>
-    </div>
-    <button class="checkout-btn">Đặt hàng ngay</button>
-</div>
-
-        <!-- <div class="cart-footer">
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Tổng tiền:</span>
+                <strong id="cartTotal">0đ</strong>
+            </div>
             <button class="checkout-btn">Đặt hàng ngay</button>
-        </div> -->
+        </div>
+
+        
+
+
     </div>
+
+    <div id="setPopup" class="popup hidden">
+            <div class="popup-overlay" onclick="closePopupShowSet()"></div>
+
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopupShowSet()">×</button>
+
+                <img id="popupImage" class="popup-image">
+
+                <div class="popup-info">
+                    <div class="set-options" id="setOptions"></div>
+
+                    <h3 id="popupName"></h3>
+                    <!-- <p id="popupDescription"></p>
+                    <p id="popupDetail"></p> -->
+
+                    <p class="popup-price" id="popupPrice"></p>
+
+                    <!-- <p class="contains-title">Thành phần gồm:</p> -->
+                    <ul id="popupContains" class="contains-list"></ul>
+                </div>
+
+                <div class="popup-footer">
+                    <button onclick="addToCart()">Thêm giỏ</button>
+                </div>
+
+            </div>
+        </div>
 
     <script src="script.js"></script>
     <script src="product.js"></script>

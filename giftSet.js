@@ -12,6 +12,289 @@ const giftSets = [
   { id: "8", name: "MINH NIÊN LỤC VƯỢNG", image: "images/set/8.jpg", order: 8 }
 ];
 
+
+const productsInSet = [
+  {
+    id: "1_1",
+    setId: "1",
+    type: 2,
+    name: "CÁT TƯỜNG NHƯ Ý 1",
+    image: "images/set/1_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 890000
+  },
+  {
+    id: "1_2",
+    setId: "1",
+    type: 2,
+    name: "CÁT TƯỜNG NHƯ Ý 2",
+    image: "images/set/1_1.jpg",
+    description: "Bánh quy bơ thơm",
+    detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+    contains: [
+      
+    ],
+    unit: "Set",
+    price: 955000
+  },
+{
+    id: "2_1",
+    setId: "2",
+    type: 2,
+    name: "TỨ LINH VƯỢNG NIÊN 1",
+    image: "images/set/2_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 775000
+  },
+  {
+    id: "2_2",
+    setId: "2",
+    type: 2,
+    name: "TỨ LINH VƯỢNG NIÊN 2",
+    image: "images/set/2_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+{
+    id: "3_1",
+    setId: "3",
+    type: 2,
+    name: "SONG PHƯỢNG VINH HOA 1",
+    image: "images/set/3_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  {
+    id: "3_2",
+    setId: "3",
+    type: 2,
+    name: "SONG PHƯỢNG VINH HOA 2",
+    image: "images/set/3_2.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  {
+    id: "3_3",
+    setId: "3",
+    type: 2,
+    name: "SONG PHƯỢNG VINH HOA 3",
+    image: "images/set/3_3.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 1095000
+  },
+  {
+    id: "4_1",
+    setId: "4",
+    type: 2,
+    name: "HOA MINH CÁT LỘC 1",
+    image: "images/set/4_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  {
+    id: "5_1",
+    setId: "5",
+    type: 2,
+    name: "MINH NIÊN HỒNG PHÁT 1",
+    image: "images/set/5_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 560000
+  },
+    {
+    id: "5_2",
+    setId: "5",
+    type: 2,
+    name: "MINH NIÊN HỒNG PHÁT 2",
+    image: "images/set/5_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 645000
+  },
+  {
+    id: "6_1",
+    setId: "6",
+    type: 2,
+    name: "LONG VÂN KHAI VẬN 1",
+    image: "images/set/6.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  {
+    id: "7_1",
+    setId: "7",
+    type: 2,
+    name: "XUÂN NGỌC CÁT VƯỢNG 1",
+    image: "images/set/7.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  {
+    id: "8_1",
+    setId: "8",
+    type: 2,
+    name: "MINH NIÊN LỤC VƯỢNG 1",
+    image: "images/set/8.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      "Hạt Dẻ Cười | 160g",
+      "Nho Khô Chile | 120g",
+      "Táo Đỏ Tân Cương | 110g",
+      "Hạt Điều Rang Muối | 120g",
+      "Hũ Hạt Điều Phomai | 180g",
+      "Hạnh Nhân Rang Bor | 120g",
+      "Kẹo Nougat Cam Vàng | 120g",
+      "Bảnh Cookies Việt Quất | 150g",
+      "Vỏ hộp carton lạnh kèm túi xách & lì xì",
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  
+];
+
 /* =====================
    RENDER
 ===================== */
@@ -71,7 +354,7 @@ function slidePrev() {
 }
 
 function startAutoSlide() {
-  slideTimer = setInterval(slideNext, 3000);
+  slideTimer = setInterval(slideNext, 4000);
 }
 
 function resetAutoSlide() {
@@ -88,3 +371,139 @@ startAutoSlide();
    OPTIONAL: resize fix
 ===================== */
 window.addEventListener("resize", updateSlide);
+
+/* =====================
+   TOUCH SUPPORT (MOBILE)
+===================== */
+let startX = 0;
+let endX = 0;
+const slider = document.querySelector(".gift-slider");
+
+slider.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchmove", e => {
+  endX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", () => {
+  const diff = startX - endX;
+
+  if (Math.abs(diff) > 50) { // ngưỡng vuốt
+    if (diff > 0) {
+      slideNext(); // vuốt sang trái
+    } else {
+      slidePrev(); // vuốt sang phải
+    }
+  }
+});
+
+
+
+slider.addEventListener("touchstart", () => {
+  clearInterval(slideTimer);
+});
+
+slider.addEventListener("touchend", () => {
+  startAutoSlide();
+});
+
+
+let currentSetProducts = [];
+let selectedProduct = null;
+
+function openSetDetail(setId) {
+  currentSetProducts = productsInSet.filter(p => p.setId === setId);
+  if (!currentSetProducts.length) return;
+
+  renderSetOptions();
+  selectProduct(currentSetProducts[0]); // mặc định Set 1
+
+  document.getElementById("setPopup").classList.remove("hidden");
+}
+
+/* Render nút Set 1 / Set 2 / Set 3 */
+function renderSetOptions() {
+  const container = document.getElementById("setOptions");
+  container.innerHTML = "";
+
+  currentSetProducts.forEach((product, index) => {
+    const btn = document.createElement("button");
+    btn.textContent = `Set ${index + 1}`;
+    btn.onclick = () => selectProduct(product);
+    container.appendChild(btn);
+  });
+}
+
+/* Khi chọn 1 set */
+function selectProduct(product) {
+  selectedProduct = product;
+
+  document.getElementById("popupImage").src = product.image;
+  document.getElementById("popupName").textContent = product.name;
+  // document.getElementById("popupDescription").textContent = product.description;
+  // document.getElementById("popupDetail").textContent = product.detail;
+  document.getElementById("popupPrice").textContent =
+    product.price.toLocaleString() + "đ";
+
+  renderContains(product.contains || []);
+
+  document.querySelectorAll(".set-options button")
+    .forEach((btn, i) => {
+      btn.classList.toggle(
+        "active",
+        currentSetProducts[i].id === product.id
+      );
+    });
+}
+
+/* Render danh sách thành phần */
+function renderContains(contains) {
+  const ul = document.getElementById("popupContains");
+  ul.innerHTML = "";
+
+  if (!contains.length) {
+    ul.innerHTML = "<li>Đang cập nhật thành phần</li>";
+    return;
+  }
+
+  contains.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+}
+
+/* Đóng popup */
+function closePopupShowSet() {
+  document.getElementById("setPopup").classList.add("hidden");
+}
+
+function addToCart() {
+  document.dispatchEvent(new CustomEvent("add-to-cart", {
+    detail: {
+      id: selectedProduct.id,
+      type: 2,
+      setId: selectedProduct.setId
+    }
+  }));
+
+  closePopupShowSet();
+}
+
+
+
+
+// function addToCart() {
+//   if (!selectedProduct) return;
+
+//   cart.push({
+//     ...selectedProduct,
+//     quantity: 1
+//   });
+
+//   closePopup();
+//   renderCart(); // nếu bạn có hàm này
+// }
+
