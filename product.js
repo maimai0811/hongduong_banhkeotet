@@ -75,8 +75,28 @@ const products = [
 {
         id: 8,
         type: 1,
+        name: "Mứt Trần Bì",
+        image: "images/category/8.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 500gr",
+        price: 90000
+    },
+    {
+        id: 9,
+        type: 1,
+        name: "Xoài Sấy",
+        image: "images/category/9.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 500gr",
+        price: 125000
+    },
+    {
+        id: 10,
+        type: 1,
         name: "Mít Sấy",
-        image: "images/category/7.jpg",
+        image: "images/category/10.jpg",
         description: "Bánh quy bơ thơm",
         detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
         unit: "Túi 500gr",
