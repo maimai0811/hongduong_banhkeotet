@@ -40,7 +40,7 @@ function changeWish() {
 }
 
 // Chạy lần đầu khi load trang
-window.onload = changeWish;
+// window.onload = changeWish;
 
 const backToTop = document.getElementById("backToTop");
 

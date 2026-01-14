@@ -103,15 +103,15 @@ const products = [
         price: 150000
     },
     {
-        id: 1,
-        type: 2,
-        name: "Set Phú Quý",
-        image: "images/set/set_1.jpg",
-        description: "Set quà Tết cao cấp",
-        detail: "Set quà gồm bánh kẹo nhập khẩu, hộp sang trọng.",
-        unit: "set",
-        price: 499000
-    }
+        id: 11,
+        type: 1,
+        name: "Bánh Táo Đỏ",
+        image: "images/category/11.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 12 bánh",
+        price: 150000
+    },
 ];
 
 /*********************************

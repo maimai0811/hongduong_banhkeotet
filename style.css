@@ -1009,3 +1009,37 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+.image-viewer.hidden {
+  display: none;
+}
+
+.image-viewer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+}
+
+#viewerImage {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+/* zoom khi click */
+#viewerImage.zoomed {
+  transform: scale(1.6);
+  cursor: zoom-out;
+}
+
+
