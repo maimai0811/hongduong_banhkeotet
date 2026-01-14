@@ -12,42 +12,26 @@
 <body>
 
     <!-- HERO -->
-<header class="hero">
-    <h1>🧧 Bánh Kẹo Tết Baki - Hồng Dương Shop</h1>
-    <p>Ngọt ngào ngày Tết Trao gửi yêu thương</p>
-    <div class="hero-buttons">
-        <a href="#banhkeo" class="btn">Xem Bánh Kẹo Lẻ</a>
-        <a href="#setqua" class="btn btn-secondary">Xem Set Quà Tết</a>
-    </div>
-</header>
-<canvas id="fireworks-canvas"></canvas>
+    <header class="hero">
+        <h1>🧧 Bánh Kẹo Tết Baki - Hồng Dương Shop</h1>
+        <p>Ngọt ngào ngày Tết Trao gửi yêu thương</p>
+        <div class="hero-buttons">
+            <a href="#banhkeo" class="btn">Xem Bánh Kẹo Lẻ</a>
+            <a href="#setqua" class="btn btn-secondary">Xem Set Quà Tết</a>
+        </div>
+    </header>
+    <canvas id="fireworks-canvas"></canvas>
 
-    <!-- BÁNH KẸO -->
     <section id="banhkeo" class="section">
         <h2>🍬 Bánh Kẹo Tết</h2>
 
-        <div class="grid">
-            <div class="card">
-                <img src="images/category/menu_1.jpg" />
-                <h3>Kẹo Dẻo Trái Cây</h3>
-                <p>120.000đ</p>
-            </div>
-            <div class="card">
-                <img src="images/category/menu_1.jpg" />
-                <h3>Bánh Quy Bơ</h3>
-                <p>150.000đ</p>
-            </div>
-            <div class="card">
-                <img src="images/category/menu_1.jpg" />
-                <h3>Kẹo Chocolate</h3>
-                <p>180.000đ</p>
-            </div>
-            <div class="card">
-                <img src="images/category/menu_1.jpg" />
-                <h3>Mứt Tết Tổng Hợp</h3>
-                <p>200.000đ</p>
-            </div>
+        <!-- Ảnh menu lớn -->
+        <div class="menu-banner">
+            <img src="images/category/menu_1.jpg" alt="Menu bánh kẹo Tết">
         </div>
+
+        <div id="productList" class="product-list"></div>
+
     </section>
 
     <!-- SET QUÀ -->
@@ -102,10 +86,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-item">
-                <strong>Hotline:</strong> <a href="tel:0364180897">0364 180 897</a>
+                <strong>Hotline:</strong>
             </div>
             <div class="footer-item">
-                <strong>Facebook:</strong> <a href="https://www.facebook.com/ngohong0110/posts/pfbid0Mf5XuAD9EbXoEeEM5PpQ2TJhSa33PUjQVLAerysF36Ki65cwaArtLeZpQHSLBx6vl" target="_blank">Ngô Hồng</a>
+                <strong>Facebook:</strong>
             </div>
         </div>
         <div class="footer-bottom">
@@ -114,7 +98,73 @@
     </footer>
 
 
+    <footer class="tet-footer">
+        <div class="footer-container">
+            <div class="footer-col contact-info">
+                <h3>THÔNG TIN LIÊN HỆ</h3>
+                <p>📍 Địa chỉ: 123 Đường Hoa Mai, TP. Hà Nội</p>
+                <p>📞 Hotline: 1900 xxxx</p>
+                <p>📧 Email: lienhe@nammoi2026.com</p>
+            </div>
+
+            <div class="footer-col random-wishes">
+                <h3>LỜI CHÚC XUÂN</h3>
+                <div id="wish-display">Đang tải lời chúc...</div>
+                <button onclick="changeWish()" class="btn-refresh">Nhận lời chúc mới</button>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Lên đầu trang">
+        ⬆️
+    </button>
+
+    <div id="cartButton">
+        🛒
+        <span class="cart-count">0</span>
+    </div>
+
+
+    <!-- POPUP GIỎ HÀNG -->
+    <div id="cartOverlay"></div>
+
+    <div id="cartPopup">
+        <div class="cart-header">
+            <h3>🛒 Giỏ Hàng</h3>
+            <button id="closeCart">✖</button>
+        </div>
+
+        <div class="cart-body">
+
+            <!-- BÁNH KẸO LẺ -->
+            <div class="cart-section">
+                <h4>🍬 Bánh kẹo lẻ</h4>
+                <div id="cartType1"></div>
+            </div>
+
+            <!-- SET QUÀ -->
+            <div class="cart-section">
+                <h4>🎁 Set quà Tết</h4>
+                <div id="cartType2"></div>
+            </div>
+
+        </div>
+<div class="cart-footer">
+    <div class="cart-total">
+        <span>Tổng tiền:</span>
+        <strong id="cartTotal">0đ</strong>
+    </div>
+    <button class="checkout-btn">Đặt hàng ngay</button>
+</div>
+
+        <!-- <div class="cart-footer">
+            <button class="checkout-btn">Đặt hàng ngay</button>
+        </div> -->
+    </div>
+
     <script src="script.js"></script>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
     <script src="firewall.js"></script>
 </body>
 
