@@ -109,8 +109,8 @@ const products = [
         image: "images/category/11.jpg",
         description: "Bánh quy bơ thơm",
         detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
-        unit: "Túi 12 bánh",
-        price: 150000
+        unit: "Túi 500gr",
+        price: 183000
     },
 ];
 

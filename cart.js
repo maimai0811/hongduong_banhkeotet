@@ -220,7 +220,7 @@ document.addEventListener("click", function (e) {
 
     const id = cartItemEl.dataset.id;
     const type = Number(cartItemEl.dataset.type);
-    const item = cart.find(i => i.id === id && i.type === type);
+    const item = cart.find(i => i.id == id && i.type === type);
 
     if (!item) return;
 
@@ -235,7 +235,7 @@ document.addEventListener("click", function (e) {
     }
 
     if (e.target.classList.contains("remove-item")) {
-        cart = cart.filter(i => !(i.id === id && i.type === type));
+        cart = cart.filter(i => !(i.id == id && i.type === type));
         renderCart();
     }
 });
