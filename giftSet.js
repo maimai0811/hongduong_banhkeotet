@@ -349,7 +349,7 @@ function slidePrev() {
 }
 
 function startAutoSlide() {
-  slideTimer = setInterval(slideNext, 10000);
+  slideTimer = setInterval(slideNext, 50000);
 }
 
 function resetAutoSlide() {

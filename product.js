@@ -112,6 +112,107 @@ const products = [
         unit: "Túi 500gr",
         price: 183000
     },
+    {
+        id: 12,
+        type: 3,
+        name: "Bánh Táo Đỏ",
+        image: "images/category/11.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 500gr",
+        price: 183000
+    },
+        {
+        id: 13,
+        type: 3,
+        name: "Bánh Táo Đỏ",
+        image: "images/category/11.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 500gr",
+        price: 183000
+    },
+        {
+        id: 14,
+        type: 3,
+        name: "Bánh Táo Đỏ",
+        image: "images/category/11.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 500gr",
+        price: 183000
+    },
+        {
+        id: 15,
+        type: 3,
+        name: "Bánh Táo Đỏ",
+        image: "images/category/11.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Túi 500gr",
+        price: 183000
+    },
+
+    {
+        id: 16,
+        type: 4,
+        name: "LỤC BẢO TINH HOA",
+        image: "images/setnghetoi/1.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Set",
+        price: 1840000
+    },
+    {
+        id: 17,
+        type: 4,
+        name: "NGŨ QUÝ TINH HOA",
+        image: "images/setnghetoi/2.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Set",
+        price: 1550000
+    },
+        {
+        id: 18,
+        type: 4,
+        name: "TAM CHÂU TINH HOA",
+        image: "images/setnghetoi/3.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Set",
+        price: 970000
+    },
+        {
+        id: 19,
+        type: 4,
+        name: "SONG BẢO TINH HOA",
+        image: "images/setnghetoi/4.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Set",
+        price: 690000
+    },
+        {
+        id: 20,
+        type: 4,
+        name: "NGŨ BẢO TINH HOA",
+        image: "images/setnghetoi/5.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Set",
+        price: 1600000
+    },
+        {
+        id: 21,
+        type: 4,
+        name: "TAM BẢO TINH HOA",
+        image: "images/setnghetoi/6.jpg",
+        description: "Bánh quy bơ thơm",
+        detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+        unit: "Set",
+        price: 1000000
+    },
 ];
 
 /*********************************
@@ -166,3 +267,90 @@ document.addEventListener("click", function (e) {
         })
     );
 });
+
+
+
+
+function renderSetNgheToi(products) {
+  const grid = document.getElementById("setNgheToiGrid");
+  if (!grid) return;
+
+  const list = products
+    .filter(p => p.type === 4)   // set nghệ tỏi
+    .slice(0, 6);
+
+  grid.innerHTML = list.map(p => `
+    <div class="setnghetoi-item"
+         data-id="${p.id}"
+         data-type="4"
+         data-set-id="${p.setId || ""}">
+         
+        <img src="${p.image}" alt="${p.name}">
+
+        <div class="overlay">
+            <div class="info">
+                <h3 class="name">${p.name}</h3>
+                <p class="price">${p.price.toLocaleString()}đ</p>
+            </div>
+
+            <button class="btn-plus" type="button">+</button>
+        </div>
+    </div>
+  `).join("");
+}
+
+
+
+renderSetNgheToi(products);
+
+document.addEventListener("click", function (e) {
+
+  /* =====================
+     CLICK NÚT + → ADD CART
+  ===================== */
+  const btn = e.target.closest(".btn-plus");
+  if (btn) {
+    e.stopPropagation();
+
+    const item = btn.closest(".setnghetoi-item");
+    if (!item) return;
+
+    document.dispatchEvent(new CustomEvent("add-to-cart", {
+      detail: {
+        id: Number(item.dataset.id),
+        type: Number(item.dataset.type),
+        setId: item.dataset.setId || null
+      }
+    }));
+
+    return; // ❌ KHÔNG fly, ❌ KHÔNG toggle
+  }
+
+  /* =====================
+     CLICK CARD → MOBILE TAP
+  ===================== */
+  const item = e.target.closest(".setnghetoi-item");
+  if (!item) return;
+
+  // Desktop bỏ qua (hover xử lý)
+  if (window.innerWidth >= 769) return;
+
+  const isActive = item.classList.contains("active");
+
+  // Đóng card khác
+  document.querySelectorAll(".setnghetoi-item.active")
+    .forEach(el => el !== item && el.classList.remove("active"));
+
+  // Tap lần 1 → mở
+  if (!isActive) {
+    item.classList.add("active");
+
+    // rung lắc
+    item.classList.remove("tap");
+    void item.offsetWidth;
+    item.classList.add("tap");
+  }
+});
+
+
+

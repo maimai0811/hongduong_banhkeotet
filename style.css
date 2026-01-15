@@ -1043,3 +1043,254 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 
+.setchanh-wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 24px;
+}
+
+.setchanh-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.setchanh-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.setchanh-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.setchanh-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.setchanh-item .price {
+  color: #e53935;
+  font-weight: 600;
+}
+
+.btn-add {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .setchanh-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* =====================
+   SET NGHỆ TỎI – MOBILE FIRST
+===================== */
+
+.setnghetoi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Item cơ bản */
+.setnghetoi-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff7ed;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+/* Zig-zag mobile */
+.setnghetoi-item:nth-child(even) { margin-left: 16px; }
+.setnghetoi-item:nth-child(odd)  { margin-right: 16px; }
+
+/* Image */
+.setnghetoi-item img {
+  width: 100%;
+  display: block;
+  transition: transform .4s ease;
+}
+
+/* =====================
+   OVERLAY
+===================== */
+
+.setnghetoi-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(200,30,30,.85),
+    rgba(245,158,11,.35)
+  );
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;        /* ❗ quan trọng */
+}
+
+/* Hiện overlay */
+.setnghetoi-item.active .overlay,
+.setnghetoi-item:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =====================
+   INFO TRONG OVERLAY
+===================== */
+
+.setnghetoi-item .info {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 54px;
+  color: #fff;
+}
+
+.setnghetoi-item .name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.setnghetoi-item .price {
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fde047, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =====================
+   NÚT + GIỎ HÀNG
+===================== */
+
+.btn-plus {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #c81e1e, #f59e0b);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,.3);
+}
+
+.btn-plus:active {
+  transform: scale(.9);
+}
+
+/* =====================
+   TAP SHAKE (MOBILE)
+===================== */
+
+@keyframes tapShake {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(.97) rotate(-1deg); }
+  70%  { transform: scale(.99) rotate(1deg); }
+  100% { transform: scale(1); }
+}
+
+.setnghetoi-item.tap {
+  animation: tapShake .35s ease;
+}
+
+/* =====================
+   DESKTOP
+===================== */
+
+@media (min-width: 769px) {
+  .setnghetoi-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .setnghetoi-item:nth-child(even),
+  .setnghetoi-item:nth-child(odd) {
+    margin: 0;
+  }
+
+  .setnghetoi-item:hover img {
+    transform: scale(1.06);
+  }
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width: 768px) {
+  .setnghetoi-item {
+    max-width: 75vw;
+  }
+
+  .setnghetoi-item:nth-child(odd)  { margin-right: auto; }
+  .setnghetoi-item:nth-child(even) { margin-left: auto; }
+
+  ❌ tắt hover giả trên mobile
+  .setnghetoi-item:hover .overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  
+}
+
+@media (hover: none) {
+  .setnghetoi-item:hover .overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.setnghetoi-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(200,30,30,.85),
+    rgba(245,158,11,.35)
+  );
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+
+@media (min-width: 769px) {
+  .setnghetoi-item:hover .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .setnghetoi-item.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+
+

@@ -37,7 +37,7 @@ document.addEventListener("add-to-cart", function (e) {
     const { id, type, setId = null } = e.detail;
 
     let product = null;
-    if (type === 1) {
+    if (type === 1 || type === 3 || type === 4) {
         product = products.find(p => p.id === id);
     } else if (type === 2) {
         product = productsInSet.find(p => p.id === id);
@@ -113,10 +113,15 @@ document.addEventListener("add-to-cart", function (e) {
 //     updateCartTotal();
 // }
 
+const cartType3El = document.getElementById("cartType3"); // set chanh
+const cartType4El = document.getElementById("cartType4"); // set nghệ tỏi
+
 
 function renderCart() {
     cartType1El.innerHTML = "";
     cartType2El.innerHTML = "";
+    cartType3El.innerHTML = "";
+    cartType4El.innerHTML = "";
 
     /* =====================
        BÁNH KẸO LẺ (GIỮ NGUYÊN)
@@ -205,6 +210,69 @@ function renderCart() {
 
         cartType2El.appendChild(setWrap);
     });
+
+    cart.filter(i => i.type === 3).forEach(item => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.dataset.id = item.id;
+        div.dataset.type = item.type;
+
+        const image = getProductImage(item);
+
+        div.innerHTML = `
+            <img src="${image}">
+            <div class="item-info">
+                <p class="item-name">${item.name}</p>
+                <p class="item-price">
+                    ${item.price.toLocaleString()}đ / ${item.unit}
+                </p>
+            </div>
+
+            <div class="qty-control">
+                <button class="decrease">-</button>
+                <span>${item.qty}</span>
+                <button class="increase">+</button>
+            </div>
+
+            <button class="remove-item">✖</button>
+        `;
+
+        cartType3El.appendChild(div);
+    });
+
+    /* =====================
+       SET NGHỆ TỎI (TYPE 4)
+       GIAO DIỆN GIỐNG TYPE 1
+    ===================== */
+    cart.filter(i => i.type === 4).forEach(item => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.dataset.id = item.id;
+        div.dataset.type = item.type;
+
+        const image = getProductImage(item);
+
+        div.innerHTML = `
+            <img src="${image}">
+            <div class="item-info">
+                <p class="item-name">${item.name}</p>
+                <p class="item-price">
+                    ${item.price.toLocaleString()}đ / ${item.unit}
+                </p>
+            </div>
+
+            <div class="qty-control">
+                <button class="decrease">-</button>
+                <span>${item.qty}</span>
+                <button class="increase">+</button>
+            </div>
+
+            <button class="remove-item">✖</button>
+        `;
+
+        cartType4El.appendChild(div);
+    });
+
 
     updateCartBadge();
     updateCartTotal();
