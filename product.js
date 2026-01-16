@@ -115,8 +115,8 @@ const products = [
     {
         id: 12,
         type: 3,
-        name: "Bánh Táo Đỏ",
-        image: "images/category/11.jpg",
+        name: "Tết Di Sản",
+        image: "images/setchanh/1.jpg",
         description: "Bánh quy bơ thơm",
         detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
         unit: "Túi 500gr",
@@ -125,8 +125,8 @@ const products = [
         {
         id: 13,
         type: 3,
-        name: "Bánh Táo Đỏ",
-        image: "images/category/11.jpg",
+        name: "Tết Danh Thắng 1",
+        image: "images/setchanh/1.jpg",
         description: "Bánh quy bơ thơm",
         detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
         unit: "Túi 500gr",
@@ -135,8 +135,8 @@ const products = [
         {
         id: 14,
         type: 3,
-        name: "Bánh Táo Đỏ",
-        image: "images/category/11.jpg",
+        name: "Tết Danh Thắng 2",
+        image: "images/setchanh/1.jpg",
         description: "Bánh quy bơ thơm",
         detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
         unit: "Túi 500gr",
@@ -145,8 +145,8 @@ const products = [
         {
         id: 15,
         type: 3,
-        name: "Bánh Táo Đỏ",
-        image: "images/category/11.jpg",
+        name: "Tết Danh Thắng 3",
+        image: "images/setchanh/1.jpg",
         description: "Bánh quy bơ thơm",
         detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
         unit: "Túi 500gr",
@@ -353,4 +353,43 @@ document.addEventListener("click", function (e) {
 });
 
 
+
+function renderSetChanh(products) {
+    const circle = document.getElementById("setChanhCircle");
+    if (!circle) return;
+
+    const list = products
+        .filter(p => p.type === 3)   // set chanh
+        .slice(0, 4);                // tối đa 4 lát
+
+    circle.innerHTML = list.map((p, index) => `
+        <div class="chanh-slice slice-${index}"
+             data-id="${p.id}"
+             data-type="${p.type}"
+             data-set-id="${p.setId || ""}">
+             
+            <span class="chanh-name">${p.name}</span>
+        </div>
+    `).join("");
+
+    // bind event sau khi render
+    circle.querySelectorAll(".chanh-slice").forEach(slice => {
+        slice.addEventListener("click", () => {
+            const id = slice.dataset.id;
+            const product = list.find(p => p.id == id);
+
+            if (!product) return;
+
+            console.log("ID:", product.id);
+            console.log("TYPE:", product.type);
+            console.log("PRODUCT:", product);
+
+            // ví dụ
+            // addToCart(product);
+            alert(`${product.name}\n${product.price.toLocaleString()}đ`);
+        });
+    });
+}
+
+renderSetChanh(products);
 
