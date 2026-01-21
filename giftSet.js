@@ -51,6 +51,20 @@ const productsInSet = [
     price: 955000
   },
   {
+    id: "1_3",
+    setId: "1",
+    type: 2,
+    name: "CÁT TƯỜNG NHƯ Ý (Phiên bản không rượu)",
+    image: "images/set/1_1.jpg",
+    description: "Bánh quy bơ thơm",
+    detail: "Bánh quy bơ giòn xốp, nướng theo công thức truyền thống.",
+    contains: [
+
+    ],
+    unit: "Set",
+    price: 845000
+  },
+  {
     id: "2_1",
     setId: "2",
     type: 2,
@@ -77,6 +91,20 @@ const productsInSet = [
     ],
     unit: "Set",
     price: 845000
+  },
+  {
+    id: "2_3",
+    setId: "2",
+    type: 2,
+    name: "TỨ LINH VƯỢNG NIÊN (Phiên bản không rượu)",
+    image: "images/set/2_1.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      
+    ],
+    unit: "Set",
+    price: 585000
   },
   {
     id: "3_1",
@@ -119,6 +147,34 @@ const productsInSet = [
     ],
     unit: "Set",
     price: 1095000
+  },
+  {
+    id: "3_4",
+    setId: "3",
+    type: 2,
+    name: "SONG PHƯỢNG VINH HOA (Phiên bản không rượu 1)",
+    image: "images/set/3_3.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      
+    ],
+    unit: "Set",
+    price: 645000
+  },
+  {
+    id: "3_5",
+    setId: "3",
+    type: 2,
+    name: "SONG PHƯỢNG VINH HOA (Phiên bản không rượu 2)",
+    image: "images/set/3_3.jpg",
+    description: "Kẹo dẻo vị trái cây",
+    detail: "Kẹo dẻo nhiều hương vị trái cây tự nhiên, phù hợp cho trẻ em và người lớn.",
+    contains: [
+      
+    ],
+    unit: "Set",
+    price: 845000
   },
   {
     id: "4_1",
@@ -420,6 +476,7 @@ function openSetDetail(setId) {
 
 /* Render nút Set 1 / Set 2 / Set 3 */
 function renderSetOptions() {
+  document.getElementById("popupImage").src = 'images/set/' + currentSetProducts[0].setId + '.jpg';
   const container = document.getElementById("setOptions");
   container.innerHTML = "";
 
@@ -435,7 +492,7 @@ function renderSetOptions() {
 function selectProduct(product) {
   selectedProduct = product;
 
-  document.getElementById("popupImage").src = product.image;
+  // document.getElementById("popupImage").src = product.image;
   document.getElementById("popupName").textContent = product.name;
   // document.getElementById("popupDescription").textContent = product.description;
   // document.getElementById("popupDetail").textContent = product.detail;
@@ -484,7 +541,7 @@ function addToCart() {
     }
   }));
 
-  closePopupShowSet();
+  // closePopupShowSet();
 }
 
 

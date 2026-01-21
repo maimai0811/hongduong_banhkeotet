@@ -391,5 +391,5 @@ function renderSetChanh(products) {
     });
 }
 
-renderSetChanh(products);
+// renderSetChanh(products);
 

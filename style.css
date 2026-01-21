@@ -1450,4 +1450,52 @@ body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 
+/* .popup-footer {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-footer button {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 20px;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+.popup-footer span {
+  display: none;
+}
+
+.close-btn {
+  background: #555;
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+
+  background: #c62828;
+  color: #fff;
+  border-radius: 50%;
+} */
+
 
